@@ -1,12 +1,5 @@
 const removeFromArray = function(arr, ...removeArr) {
-    for(let i = 0; i < removeArr.length; i++){
-        if(arr.includes(removeArr[i])){
-            let elementRemovedIndex = arr.indexOf(removeArr[i]);
-            arr.splice(elementRemovedIndex, 1);
-            i--;
-        }    
-    }
-    return arr;
+    return arr.filter(val => !removeArr.includes(val))
 };
 //create a for loop that check if removeArr[n] exists in arr 
 // if it exists then remove it by using splice and indexOf() and then decrement the i
